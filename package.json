@@ -4,11 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel-node --presets es2015 $(npm bin)/serverless webpack",
+    "deploy": "babel-node --presets es2015 $(npm bin)/serverless deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@slightlytyler/serverless-webpack": "^1.0.0-rc.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.20.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.9",
+    "babel-plugin-transform-regenerator": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.12.1",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-class-property": "^1.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-lodash-fp": "^2.1.3",
     "serverless": "^1.3.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.2"
   }
 }

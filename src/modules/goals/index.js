@@ -1,0 +1,1 @@
+export fetchCollection from './fetchCollection';

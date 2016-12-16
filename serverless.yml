@@ -1,0 +1,19 @@
+service: goals
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+plugins:
+  - '@slightlytyler/serverless-webpack'
+
+custom:
+  webpack: ./dev/build/config.js
+
+functions:
+  fetchCollection:
+    handler: goals.fetchCollection
+    events:
+      - http:
+          path: goals
+          method: get
