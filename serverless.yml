@@ -11,6 +11,12 @@ custom:
   webpack: ./dev/build/config.js
 
 functions:
+  createRecord:
+    handler: goals.createRecord
+    events:
+      - http:
+          path: goals
+          method: post
   fetchCollection:
     handler: goals.fetchCollection
     events:
