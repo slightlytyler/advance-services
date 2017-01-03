@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "babel-node --presets es2015 $(npm bin)/serverless offline --location .webpack --port 4000",
     "build": "babel-node --presets es2015 $(npm bin)/serverless webpack",
     "deploy": "babel-node --presets es2015 $(npm bin)/serverless deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:slightlytyler/advance-services.git"
+  },
   "devDependencies": {
     "@slightlytyler/serverless-webpack": "^1.0.0-rc.3",
     "babel-cli": "^6.18.0",
@@ -25,7 +30,8 @@
     "eslint-plugin-class-property": "^1.0.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-lodash-fp": "^2.1.3",
-    "serverless": "^1.3.0"
+    "serverless": "^1.3.0",
+    "serverless-offline": "^3.7.0"
   },
   "dependencies": {
     "lodash": "^4.17.2"
